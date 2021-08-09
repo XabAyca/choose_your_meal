@@ -1,0 +1,35 @@
+.link{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 1.2rem;
+  color: bisque;
+  margin: 0 20px;
+  text-decoration: none;
+  position: relative;
+  transition: all 1s ease-out;
+
+  &.link-active{
+    color: rgb(255, 142, 5);
+    letter-spacing: 0.2rem;
+  }
+
+  &::before{
+    content: "";
+    width: 0%;
+    height: 3px;
+    border-radius: 50px;
+    background-color: bisque;
+    position: absolute;
+    bottom: - 5px;
+    transition: 1s ease-out;
+  }
+
+  &:hover::before{
+    width: 100%;
+    background-color: rgb(255, 142, 5);
+
+  }
+  &:hover{
+    color: rgb(255, 142, 5);
+    letter-spacing: 0.2rem;  
+  }
+}
